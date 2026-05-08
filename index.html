@@ -1,19 +1,124 @@
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BBQ2026</title>
-</head>
-<body>
-    <h1>Welkom bij BBQ2026</h1>
-    <p>Inschrijvingen BBQ</p>
 
-    <ul>
-        <li>Gerrit van Wijk</li>
-        <li>Andre van der Horst</li>
-        <li>Wilco van Dijk</li>
-    </ul>
+    <style>
+
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        th {
+            background-color: #ff9800;
+            color: white;
+            padding: 15px;
+            font-size: 1.1rem;
+        }
+
+        td {
+            padding: 14px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        tr:hover {
+            background-color: rgba(255,255,255,0.08);
+        }
+
+        @media (max-width: 600px) {
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🔥 BBQ2026 🔥</h1>
+
+        <p>Inschrijvingen BBQ</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Naam</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Gerrit van Wijk</td>
+                    <td>✅ Ingeschreven</td>
+                </tr>
+
+                <tr>
+                    <td>Andre van der Horst</td>
+                    <td>✅ Ingeschreven</td>
+                </tr>
+
+                <tr>
+                    <td>Wilco van Dijk</td>
+                    <td>⏳ Nog niet betaald</td>
+                </tr>
+
+                <tr>
+                    <td>Thorsten Lopulissa</td>
+                    <td>✅ Ingeschreven</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
 </body>
 </html>
