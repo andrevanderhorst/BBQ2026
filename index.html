@@ -2,10 +2,17 @@
 <html lang="nl">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="favicon.png">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>🔥 BBQ RTN 2026 🔥</title>
+
+    <link rel="icon"
+          type="image/png"
+          href="favicon.png">
 
     <style>
 
@@ -14,20 +21,28 @@
         }
 
         body {
+
             margin: 0;
+
             font-family: Arial, Helvetica, sans-serif;
+
             background: #121212;
+
             color: white;
+
             overflow-x: hidden;
         }
 
         .hero-wrapper {
 
             width: 100%;
+
             background: black;
 
             display: flex;
+
             justify-content: center;
+
             align-items: center;
 
             padding: 15px;
@@ -36,11 +51,8 @@
         .hero-image {
 
             width: 100%;
-            max-width: 1402px;
 
-            height: auto;
-
-            display: block;
+            max-width: 1400px;
 
             border-radius: 20px;
 
@@ -48,77 +60,119 @@
         }
 
         .container {
+
             max-width: 1100px;
+
             margin: auto;
+
             padding: 20px;
         }
 
         .card {
+
             background: #1e1e1e;
+
             border-radius: 25px;
+
             padding: 35px;
+
             margin-top: 30px;
-            position: relative;
-            z-index: 10;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+
             text-align: center;
+
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
         }
 
         h1 {
+
             font-size: 3rem;
-            margin-bottom: 10px;
+
             color: orange;
+
+            margin-bottom: 10px;
         }
 
         h2 {
+
             color: orange;
-            margin-bottom: 20px;
         }
 
         .subtitle {
+
             font-size: 1.3rem;
-            margin-bottom: 35px;
+
             color: #cccccc;
+
+            margin-bottom: 30px;
         }
 
-        .info-cards {
-            margin-top: 30px;
+        .language-buttons {
+
+            margin: 25px 0;
+        }
+
+        .language-buttons button {
+
+            margin: 5px;
+
+            padding: 12px 20px;
+
+            border: none;
+
+            border-radius: 14px;
+
+            background: linear-gradient(135deg, orange, #ffb347);
+
+            color: black;
+
+            font-weight: bold;
+
+            font-size: 1rem;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .language-buttons button:hover {
+
+            transform: translateY(-2px) scale(1.05);
+
+            background: linear-gradient(135deg, #ffb347, orange);
         }
 
         .info-item {
 
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
 
             background: #262626;
 
             padding: 18px 25px;
+
             margin-bottom: 15px;
 
             border-radius: 15px;
 
             font-size: 1.1rem;
-
-            transition: 0.3s;
-        }
-
-        .info-item:hover {
-            background: #333333;
         }
 
         .label {
-            font-weight: bold;
-            color: orange;
-        }
 
-        .value {
-            color: white;
+            font-weight: bold;
+
+            color: orange;
         }
 
         .payment-box {
 
             margin-top: 40px;
+
             padding: 30px;
 
             background: #262626;
@@ -131,27 +185,31 @@
             display: inline-block;
 
             margin-top: 20px;
+
             padding: 16px 40px;
 
             background: orange;
+
             color: black;
 
             text-decoration: none;
+
             font-weight: bold;
 
             border-radius: 12px;
 
             transition: 0.3s;
-
-            font-size: 1rem;
         }
 
         .pay-button:hover {
+
             background: #ffb733;
+
             transform: scale(1.05);
         }
 
         .participants-box {
+
             margin-top: 50px;
         }
 
@@ -161,21 +219,20 @@
 
             border-collapse: collapse;
 
+            margin-top: 20px;
+
             overflow: hidden;
 
             border-radius: 15px;
-
-            margin-top: 20px;
         }
 
         th {
 
             background: orange;
+
             color: black;
 
             padding: 15px;
-
-            font-size: 1rem;
         }
 
         td {
@@ -188,11 +245,14 @@
         }
 
         tr:hover td {
+
             background: #333333;
         }
 
         .status {
+
             color: #4CAF50;
+
             font-weight: bold;
         }
 
@@ -209,29 +269,13 @@
 
         @media (max-width: 768px) {
 
-            .hero-wrapper {
-                padding: 10px;
-            }
-
-            .hero-image {
-                border-radius: 15px;
-            }
-
             h1 {
                 font-size: 2rem;
             }
 
             .card {
 
-                margin-top: 20px;
-
                 padding: 20px;
-
-                border-radius: 20px;
-            }
-
-            .subtitle {
-                font-size: 1rem;
             }
 
             .info-item {
@@ -243,51 +287,26 @@
                 text-align: center;
             }
 
-            th,
-            td {
-
-                padding: 10px;
-
-                font-size: 0.9rem;
-            }
-
             .pay-button {
+
                 width: 100%;
             }
 
-            .footer-text {
-                font-size: 1rem;
+            th,
+            td {
+
+                font-size: 0.9rem;
+
+                padding: 10px;
             }
         }
 
     </style>
+
 </head>
 
 <body>
-<!--<script>
 
-let wachtwoord = prompt("Voer wachtwoord in:");
-
-if (wachtwoord !== "BBQ2026") {
-
-    document.body.innerHTML = `
-        <div style="
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
-            background:black;
-            color:white;
-            font-family:Arial;
-            font-size:2rem;
-        ">
-            ❌ Geen toegang
-        </div>
-    `;
-}
-
-</script>)-->
-    
     <div class="hero-wrapper">
 
         <img src="WhatsApp Image 2026-05-07 at 17.49.49.jpeg"
@@ -302,40 +321,94 @@ if (wachtwoord !== "BBQ2026") {
 
             <h1>🔥 BBQ RTN 2026 🔥</h1>
 
-            <p class="subtitle">
-                Gezelligheid, vlees, drankjes en natuurlijk een topavond 🍻
+            <div class="language-buttons">
+
+                <button onclick="setLanguage('nl')">
+                    🇳🇱 Nederlands
+                </button>
+
+                <button onclick="setLanguage('pl')">
+                    🇵🇱 Polski
+                </button>
+
+                <button onclick="setLanguage('hu')">
+                    🇭🇺 Magyar
+                </button>
+
+            </div>
+
+            <p id="ondertitel"
+               class="subtitle">
+
+               Gezelligheid, vlees, drankjes en natuurlijk een topavond 🍻
+
             </p>
 
-            <div class="info-cards">
+            <div class="info-item">
 
-                <div class="info-item">
-                    <span class="label">📅 Datum</span>
-                    <span class="value">26 juni 2026</span>
-                </div>
+                <span id="datum-label"
+                      class="label">
 
-                <div class="info-item">
-                    <span class="label">📍 Locatie</span>
-                    <span class="value">Bij Gerrit</span>
-                </div>
+                      📅 Datum
 
-                <div class="info-item">
-                    <span class="label">💰 Prijs</span>
-                    <span class="value">€30,- per persoon</span>
-                </div>
+                </span>
+
+                <span>
+                    26 juni 2026
+                </span>
+
+            </div>
+
+            <div class="info-item">
+
+                <span id="locatie-label"
+                      class="label">
+
+                      📍 Locatie
+
+                </span>
+
+                <span id="locatie-waarde">
+                    Bij Gerrit
+                </span>
+
+            </div>
+
+            <div class="info-item">
+
+                <span id="prijs-label"
+                      class="label">
+
+                      💰 Prijs
+
+                </span>
+
+                <span id="prijs-waarde">
+                    €30,- per persoon
+                </span>
 
             </div>
 
             <div class="payment-box">
 
-                <h2>💳 Betaalverzoek</h2>
+                <h2 id="betaal-titel">
 
-                <p>
+                    💳 Betaalverzoek
+
+                </h2>
+
+                <p id="betaal-tekst">
+
                     Hoi, wil je mij €30,00 betalen voor BBQ 2026?<br>
+
                     Je kunt met elke bank in Nederland betalen.<br>
+
                     Dank je wel!
+
                 </p>
 
-                <a class="pay-button"
+                <a id="betaal-knop"
+                   class="pay-button"
                    href="https://betaalverzoek.rabobank.nl/betaalverzoek/?id=ugmqBstWQUCJC3XnWOvXbw"
                    target="_blank">
 
@@ -347,15 +420,28 @@ if (wachtwoord !== "BBQ2026") {
 
             <div class="participants-box">
 
-                <h2>✅ Ingeschreven deelnemers</h2>
+                <h2 id="deelnemers">
+
+                    ✅ Ingeschreven deelnemers
+
+                </h2>
 
                 <table>
 
                     <thead>
+
                         <tr>
-                            <th>Naam</th>
-                            <th>Status</th>
+
+                            <th id="naam-header">
+                                Naam
+                            </th>
+
+                            <th id="status-header">
+                                Status
+                            </th>
+
                         </tr>
+
                     </thead>
 
                     <tbody>
@@ -401,14 +487,15 @@ if (wachtwoord !== "BBQ2026") {
 
             </div>
 
-            <div class="footer-text">
+            <div id="footer"
+                 class="footer-text">
 
                 👉 Zoals ieder jaar zal het weer bij Gerrit gehouden worden.<br>
-                Later meer info over tijden etc.
 
-                <br><br>
+                Later meer info over tijden etc.<br><br>
 
                 Groet,<br>
+
                 Andre & Gerrit
 
             </div>
@@ -416,6 +503,195 @@ if (wachtwoord !== "BBQ2026") {
         </div>
 
     </div>
+
+    <script>
+
+        const teksten = {
+
+            nl: {
+
+                ondertitel:
+                "Gezelligheid, vlees, drankjes en natuurlijk een topavond 🍻",
+
+                datum:
+                "📅 Datum",
+
+                locatie:
+                "📍 Locatie",
+
+                prijs:
+                "💰 Prijs",
+
+                locatieWaarde:
+                "Bij Gerrit",
+
+                prijsWaarde:
+                "€30,- per persoon",
+
+                betaalTitel:
+                "💳 Betaalverzoek",
+
+                betaalTekst:
+                "Hoi, wil je mij €30,00 betalen voor BBQ 2026?<br>Je kunt met elke bank in Nederland betalen.<br>Dank je wel!",
+
+                betaalKnop:
+                "👉 Betaal hier",
+
+                deelnemers:
+                "✅ Ingeschreven deelnemers",
+
+                naam:
+                "Naam",
+
+                status:
+                "Status",
+
+                ingeschreven:
+                "✅ Ingeschreven",
+
+                footer:
+                "👉 Zoals ieder jaar zal het weer bij Gerrit gehouden worden.<br>Later meer info over tijden etc.<br><br>Groet,<br>Andre & Gerrit"
+            },
+
+            pl: {
+
+                ondertitel:
+                "Miła atmosfera, mięso, napoje i świetny wieczór 🍻",
+
+                datum:
+                "📅 Data",
+
+                locatie:
+                "📍 Lokalizacja",
+
+                prijs:
+                "💰 Cena",
+
+                locatieWaarde:
+                "U Gerrita",
+
+                prijsWaarde:
+                "€30 za osobę",
+
+                betaalTitel:
+                "💳 Płatność",
+
+                betaalTekst:
+                "Czy możesz zapłacić €30 za BBQ 2026?<br>Dziękujemy!",
+
+                betaalKnop:
+                "👉 Zapłać tutaj",
+
+                deelnemers:
+                "✅ Uczestnicy",
+
+                naam:
+                "Imię",
+
+                status:
+                "Status",
+
+                ingeschreven:
+                "✅ Zapisany",
+
+                footer:
+                "👉 Jak co roku BBQ odbędzie się u Gerrita.<br><br>Pozdrawiamy,<br>Andre i Gerrit"
+            },
+
+            hu: {
+
+                ondertitel:
+                "Jó hangulat, húsok, italok és remek este 🍻",
+
+                datum:
+                "📅 Dátum",
+
+                locatie:
+                "📍 Helyszín",
+
+                prijs:
+                "💰 Ár",
+
+                locatieWaarde:
+                "Gerritnél",
+
+                prijsWaarde:
+                "€30 személyenként",
+
+                betaalTitel:
+                "💳 Fizetés",
+
+                betaalTekst:
+                "Kérlek fizess €30-t a BBQ 2026-ra.<br>Köszönjük!",
+
+                betaalKnop:
+                "👉 Fizetés itt",
+
+                deelnemers:
+                "✅ Résztvevők",
+
+                naam:
+                "Név",
+
+                status:
+                "Állapot",
+
+                ingeschreven:
+                "✅ Regisztrálva",
+
+                footer:
+                "👉 A BBQ idén is Gerritnél lesz.<br><br>Üdv,<br>Andre és Gerrit"
+            }
+        };
+
+        function setLanguage(lang) {
+
+            document.getElementById("ondertitel").innerHTML =
+                teksten[lang].ondertitel;
+
+            document.getElementById("datum-label").innerHTML =
+                teksten[lang].datum;
+
+            document.getElementById("locatie-label").innerHTML =
+                teksten[lang].locatie;
+
+            document.getElementById("prijs-label").innerHTML =
+                teksten[lang].prijs;
+
+            document.getElementById("locatie-waarde").innerHTML =
+                teksten[lang].locatieWaarde;
+
+            document.getElementById("prijs-waarde").innerHTML =
+                teksten[lang].prijsWaarde;
+
+            document.getElementById("betaal-titel").innerHTML =
+                teksten[lang].betaalTitel;
+
+            document.getElementById("betaal-tekst").innerHTML =
+                teksten[lang].betaalTekst;
+
+            document.getElementById("betaal-knop").innerHTML =
+                teksten[lang].betaalKnop;
+
+            document.getElementById("deelnemers").innerHTML =
+                teksten[lang].deelnemers;
+
+            document.getElementById("naam-header").innerHTML =
+                teksten[lang].naam;
+
+            document.getElementById("status-header").innerHTML =
+                teksten[lang].status;
+
+            document.querySelectorAll(".status").forEach(el => {
+
+                el.innerHTML = teksten[lang].ingeschreven;
+            });
+
+            document.getElementById("footer").innerHTML =
+                teksten[lang].footer;
+        }
+
+    </script>
 
 </body>
 
