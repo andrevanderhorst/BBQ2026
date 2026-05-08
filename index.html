@@ -263,7 +263,29 @@
 </head>
 
 <body>
+<script>
 
+let wachtwoord = prompt("Voer wachtwoord in:");
+
+if (wachtwoord !== "BBQ2026") {
+
+    document.body.innerHTML = `
+        <div style="
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            background:black;
+            color:white;
+            font-family:Arial;
+            font-size:2rem;
+        ">
+            ❌ Geen toegang
+        </div>
+    `;
+}
+
+</script>
     <div class="hero-wrapper">
 
         <img src="WhatsApp Image 2026-05-07 at 17.49.49.jpeg"
