@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
@@ -233,7 +232,10 @@
                       class="label">
                     📅 Datum
                 </span>
-                <span>26 juni 2026</span>
+
+                <span>
+                    26 juni 2026
+                </span>
             </div>
 
             <div class="info-item">
@@ -241,6 +243,7 @@
                       class="label">
                     📍 Locatie
                 </span>
+
                 <span id="locatie-waarde">
                     Bij Gerrit
                 </span>
@@ -251,6 +254,7 @@
                       class="label">
                     💰 Prijs
                 </span>
+
                 <span id="prijs-waarde">
                     €30,- per persoon
                 </span>
@@ -290,7 +294,9 @@
 
                     <tbody id="participants-body">
                         <tr>
-                            <td colspan="2">Deelnemers worden geladen...</td>
+                            <td colspan="2">
+                                Deelnemers worden geladen...
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -309,6 +315,11 @@
 
     <script>
         let huidigeTaal = "nl";
+
+        let deelnemersLijst = [];
+
+ const GOOGLE_SHEET_CSV_URL =
+    "https://docs.google.com/spreadsheets/d/1RCk6kma1P62D0x-gAAJsx64W3a2m_Bz4mKH_QUHl8EY/export?format=csv";
 
         const teksten = {
             nl: {
@@ -462,8 +473,6 @@
             }
         };
 
-        let deelnemersLijst = [];
-
         function setLanguage(lang) {
             huidigeTaal = lang;
 
@@ -550,14 +559,30 @@
                     `<tr><td colspan="2">${teksten[huidigeTaal].laden}</td></tr>`;
 
                 const response =
-                    await fetch("deelnemers.json");
+                    await fetch(GOOGLE_SHEET_CSV_URL);
 
                 if (!response.ok) {
-                    throw new Error("JSON bestand niet gevonden");
+                    throw new Error("Google Sheet kon niet worden geladen");
                 }
 
-                deelnemersLijst =
-                    await response.json();
+                const csv =
+                    await response.text();
+
+                const regels =
+                    csv.split(/\r?\n/);
+
+                deelnemersLijst = [];
+
+                regels.slice(1).forEach(regel => {
+                    const naam =
+                        regel.trim();
+
+                    if (naam !== "") {
+                        deelnemersLijst.push({
+                            naam: naam
+                        });
+                    }
+                });
 
                 renderParticipants();
 
