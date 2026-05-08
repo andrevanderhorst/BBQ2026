@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBQ2026</title>
+</head>
+<body>
+    <h1>Welkom bij BBQ2026</h1>
+    <p>Inschrijvingen BBQ</p>
+
+    <ul>
+        <li>Gerrit van Wijk</li>
+        <li>Andre van der Horst</li>
+        <li>Wilco van Dijk</li>
+    </ul>
+</body>
+</html>
