@@ -2,7 +2,6 @@
 <html lang="nl">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta name="viewport"
@@ -15,651 +14,458 @@
           href="favicon.png">
 
     <style>
-
         * {
             box-sizing: border-box;
         }
 
         body {
-
             margin: 0;
-
             font-family: Arial, Helvetica, sans-serif;
-
             background: #121212;
-
             color: white;
-
             overflow-x: hidden;
         }
 
         .hero-wrapper {
-
             width: 100%;
-
             background: black;
-
             display: flex;
-
             justify-content: center;
-
             align-items: center;
-
             padding: 15px;
         }
 
         .hero-image {
-
             width: 100%;
-
             max-width: 1400px;
-
             border-radius: 20px;
-
             box-shadow: 0 10px 30px rgba(0,0,0,0.6);
         }
 
         .container {
-
             max-width: 1100px;
-
             margin: auto;
-
             padding: 20px;
         }
 
         .card {
-
             background: #1e1e1e;
-
             border-radius: 25px;
-
             padding: 35px;
-
             margin-top: 30px;
-
             text-align: center;
-
             box-shadow: 0 15px 40px rgba(0,0,0,0.6);
         }
 
         h1 {
-
             font-size: 3rem;
-
             color: orange;
-
             margin-bottom: 10px;
         }
 
         h2 {
-
             color: orange;
         }
 
         .subtitle {
-
             font-size: 1.3rem;
-
             color: #cccccc;
-
             margin-bottom: 30px;
         }
 
         .language-buttons {
-
             margin: 25px 0;
         }
 
         .language-buttons button {
-
             margin: 5px;
-
             padding: 12px 20px;
-
             border: none;
-
             border-radius: 14px;
-
             background: linear-gradient(135deg, orange, #ffb347);
-
             color: black;
-
             font-weight: bold;
-
             font-size: 1rem;
-
             cursor: pointer;
-
             transition: 0.3s;
-
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
         .language-buttons button:hover {
-
             transform: translateY(-2px) scale(1.05);
-
             background: linear-gradient(135deg, #ffb347, orange);
         }
 
         .info-item {
-
             display: flex;
-
             justify-content: space-between;
-
             align-items: center;
-
             background: #262626;
-
             padding: 18px 25px;
-
             margin-bottom: 15px;
-
             border-radius: 15px;
-
             font-size: 1.1rem;
         }
 
         .label {
-
             font-weight: bold;
-
             color: orange;
         }
 
         .payment-box {
-
             margin-top: 40px;
-
             padding: 30px;
-
             background: #262626;
-
             border-radius: 20px;
         }
 
         .pay-button {
-
             display: inline-block;
-
             margin-top: 20px;
-
             padding: 16px 40px;
-
             background: orange;
-
             color: black;
-
             text-decoration: none;
-
             font-weight: bold;
-
             border-radius: 12px;
-
             transition: 0.3s;
         }
 
         .pay-button:hover {
-
             background: #ffb733;
-
             transform: scale(1.05);
         }
 
         .participants-box {
-
             margin-top: 50px;
         }
 
         table {
-
             width: 100%;
-
             border-collapse: collapse;
-
             margin-top: 20px;
-
             overflow: hidden;
-
             border-radius: 15px;
         }
 
         th {
-
             background: orange;
-
             color: black;
-
             padding: 15px;
         }
 
         td {
-
             background: #262626;
-
             padding: 15px;
-
             border-bottom: 1px solid #333;
         }
 
         tr:hover td {
-
             background: #333333;
         }
 
         .status {
-
             color: #4CAF50;
-
             font-weight: bold;
         }
 
         .footer-text {
-
             margin-top: 45px;
-
             font-size: 1.1rem;
-
             line-height: 1.8;
-
             color: #cccccc;
         }
 
         @media (max-width: 768px) {
-
             h1 {
                 font-size: 2rem;
             }
 
             .card {
-
                 padding: 20px;
             }
 
             .info-item {
-
                 flex-direction: column;
-
                 gap: 10px;
-
                 text-align: center;
             }
 
             .pay-button {
-
                 width: 100%;
             }
 
             th,
             td {
-
                 font-size: 0.9rem;
-
                 padding: 10px;
             }
         }
-
     </style>
-
 </head>
 
 <body>
 
     <div class="hero-wrapper">
-
         <img src="WhatsApp Image 2026-05-07 at 17.49.49.jpeg"
              alt="BBQ RTN 2026"
              class="hero-image">
-
     </div>
 
     <div class="container">
-
         <div class="card">
 
             <h1>🔥 BBQ RTN 2026 🔥</h1>
 
             <div class="language-buttons">
-
-                <button onclick="setLanguage('nl')">
-                    🇳🇱 Nederlands
-                </button>
-
-                <button onclick="setLanguage('pl')">
-                    🇵🇱 Polski
-                </button>
-
-                <button onclick="setLanguage('hu')">
-                    🇭🇺 Magyar
-                </button>
-
+                <button onclick="setLanguage('nl')">🇳🇱 Nederlands</button>
+                <button onclick="setLanguage('pl')">🇵🇱 Polski</button>
+                <button onclick="setLanguage('hu')">🇭🇺 Magyar</button>
             </div>
 
             <p id="ondertitel"
                class="subtitle">
-
-               Gezelligheid, vlees, drankjes en natuurlijk een topavond 🍻
-
+                Gezelligheid, vlees, drankjes en natuurlijk een topavond 🍻
             </p>
 
             <div class="info-item">
-
                 <span id="datum-label"
                       class="label">
-
-                      📅 Datum
-
+                    📅 Datum
                 </span>
-
-                <span>
-                    26 juni 2026
-                </span>
-
+                <span>26 juni 2026</span>
             </div>
 
             <div class="info-item">
-
                 <span id="locatie-label"
                       class="label">
-
-                      📍 Locatie
-
+                    📍 Locatie
                 </span>
-
                 <span id="locatie-waarde">
                     Bij Gerrit
                 </span>
-
             </div>
 
             <div class="info-item">
-
                 <span id="prijs-label"
                       class="label">
-
-                      💰 Prijs
-
+                    💰 Prijs
                 </span>
-
                 <span id="prijs-waarde">
                     €30,- per persoon
                 </span>
-
             </div>
 
             <div class="payment-box">
-
                 <h2 id="betaal-titel">
-
                     💳 Betaalverzoek
-
                 </h2>
 
                 <p id="betaal-tekst">
-
                     Hoi, wil je mij €30,00 betalen voor BBQ 2026?<br>
-
                     Je kunt met elke bank in Nederland betalen.<br>
-
                     Dank je wel!
-
                 </p>
 
                 <a id="betaal-knop"
                    class="pay-button"
                    href="https://betaalverzoek.rabobank.nl/betaalverzoek/?id=ugmqBstWQUCJC3XnWOvXbw"
                    target="_blank">
-
                     👉 Betaal hier
-
                 </a>
-
             </div>
 
             <div class="participants-box">
-
                 <h2 id="deelnemers">
-
                     ✅ Ingeschreven deelnemers
-
                 </h2>
 
                 <table>
-
                     <thead>
-
                         <tr>
-
-                            <th id="naam-header">
-                                Naam
-                            </th>
-
-                            <th id="status-header">
-                                Status
-                            </th>
-
+                            <th id="naam-header">Naam</th>
+                            <th id="status-header">Status</th>
                         </tr>
-
                     </thead>
 
-                    <tbody>
-
+                    <tbody id="participants-body">
                         <tr>
-                            <td>Gerrit van Wijk</td>
-                            <td class="status">✅ Ingeschreven</td>
+                            <td colspan="2">Deelnemers worden geladen...</td>
                         </tr>
-
-                        <tr>
-                            <td>Andre van der Horst</td>
-                            <td class="status">✅ Ingeschreven</td>
-                        </tr>
-
-                        <tr>
-                            <td>Wilco van Dijk</td>
-                            <td class="status">✅ Ingeschreven</td>
-                        </tr>
-
-                        <tr>
-                            <td>Thorsten Lopulissa</td>
-                            <td class="status">✅ Ingeschreven</td>
-                        </tr>
-
-                        <tr>
-                            <td>Frans Philibert</td>
-                            <td class="status">✅ Ingeschreven</td>
-                        </tr>
-
-                        <tr>
-                            <td>Ramona Kranenburg</td>
-                            <td class="status">✅ Ingeschreven</td>
-                        </tr>
-
-                        <tr>
-                            <td>Alexander Pouwels</td>
-                            <td class="status">✅ Ingeschreven</td>
-                        </tr>
-
-                        <tr>
-                            <td>Julius</td>
-                            <td class="status">✅ Ingeschreven</td>
-                        </tr>
-
-     <tr>
-                            <td>Patrick Louters</td>
-                            <td class="status">✅ Ingeschreven</td>
-                        </tr>
-
- <tr>
-                            <td>Denise</td>
-                            <td class="status">✅ Ingeschreven</td>
-                        </tr>
-
                     </tbody>
-
                 </table>
-
             </div>
 
             <div id="footer"
                  class="footer-text">
-
                 👉 Zoals ieder jaar zal het weer bij Gerrit gehouden worden.<br>
-
                 Later meer info over tijden etc.<br><br>
-
                 Groet,<br>
-
                 Andre & Gerrit
-
             </div>
 
         </div>
-
     </div>
 
     <script>
+        let huidigeTaal = "nl";
 
         const teksten = {
-
             nl: {
-
                 ondertitel:
-                "Gezelligheid, vlees, drankjes en natuurlijk een topavond 🍻",
+                    "Gezelligheid, vlees, drankjes en natuurlijk een topavond 🍻",
 
                 datum:
-                "📅 Datum",
+                    "📅 Datum",
 
                 locatie:
-                "📍 Locatie",
+                    "📍 Locatie",
 
                 prijs:
-                "💰 Prijs",
+                    "💰 Prijs",
 
                 locatieWaarde:
-                "Bij Gerrit",
+                    "Bij Gerrit",
 
                 prijsWaarde:
-                "€30,- per persoon",
+                    "€30,- per persoon",
 
                 betaalTitel:
-                "💳 Betaalverzoek",
+                    "💳 Betaalverzoek",
 
                 betaalTekst:
-                "Hoi, wil je mij €30,00 betalen voor BBQ 2026?<br>Je kunt met elke bank in Nederland betalen.<br>Dank je wel!",
+                    "Hoi, wil je mij €30,00 betalen voor BBQ 2026?<br>Je kunt met elke bank in Nederland betalen.<br>Dank je wel!",
 
                 betaalKnop:
-                "👉 Betaal hier",
+                    "👉 Betaal hier",
 
                 deelnemers:
-                "✅ Ingeschreven deelnemers",
+                    "✅ Ingeschreven deelnemers",
 
                 naam:
-                "Naam",
+                    "Naam",
 
                 status:
-                "Status",
+                    "Status",
 
                 ingeschreven:
-                "✅ Ingeschreven",
+                    "✅ Ingeschreven",
+
+                laden:
+                    "Deelnemers worden geladen...",
+
+                fout:
+                    "Kon deelnemers niet laden.",
 
                 footer:
-                "👉 Zoals ieder jaar zal het weer bij Gerrit gehouden worden.<br>Later meer info over tijden etc.<br><br>Groet,<br>Andre & Gerrit"
+                    "👉 Zoals ieder jaar zal het weer bij Gerrit gehouden worden.<br>Later meer info over tijden etc.<br><br>Groet,<br>Andre & Gerrit"
             },
 
             pl: {
-
                 ondertitel:
-                "Miła atmosfera, mięso, napoje i świetny wieczór 🍻",
+                    "Miła atmosfera, mięso, napoje i świetny wieczór 🍻",
 
                 datum:
-                "📅 Data",
+                    "📅 Data",
 
                 locatie:
-                "📍 Lokalizacja",
+                    "📍 Lokalizacja",
 
                 prijs:
-                "💰 Cena",
+                    "💰 Cena",
 
                 locatieWaarde:
-                "U Gerrita",
+                    "U Gerrita",
 
                 prijsWaarde:
-                "€30 za osobę",
+                    "€30 za osobę",
 
                 betaalTitel:
-                "💳 Płatność",
+                    "💳 Płatność",
 
                 betaalTekst:
-                "Czy możesz zapłacić €30 za BBQ 2026?<br>Dziękujemy!",
+                    "Czy możesz zapłacić €30 za BBQ 2026?<br>Dziękujemy!",
 
                 betaalKnop:
-                "👉 Zapłać tutaj",
+                    "👉 Zapłać tutaj",
 
                 deelnemers:
-                "✅ Uczestnicy",
+                    "✅ Uczestnicy",
 
                 naam:
-                "Imię",
+                    "Imię",
 
                 status:
-                "Status",
+                    "Status",
 
                 ingeschreven:
-                "✅ Zapisany",
+                    "✅ Zapisany",
+
+                laden:
+                    "Ładowanie uczestników...",
+
+                fout:
+                    "Nie można załadować uczestników.",
 
                 footer:
-                "👉 Jak co roku BBQ odbędzie się u Gerrita.<br><br>Pozdrawiamy,<br>Andre i Gerrit"
+                    "👉 Jak co roku BBQ odbędzie się u Gerrita.<br><br>Pozdrawiamy,<br>Andre i Gerrit"
             },
 
             hu: {
-
                 ondertitel:
-                "Jó hangulat, húsok, italok és remek este 🍻",
+                    "Jó hangulat, húsok, italok és remek este 🍻",
 
                 datum:
-                "📅 Dátum",
+                    "📅 Dátum",
 
                 locatie:
-                "📍 Helyszín",
+                    "📍 Helyszín",
 
                 prijs:
-                "💰 Ár",
+                    "💰 Ár",
 
                 locatieWaarde:
-                "Gerritnél",
+                    "Gerritnél",
 
                 prijsWaarde:
-                "€30 személyenként",
+                    "€30 személyenként",
 
                 betaalTitel:
-                "💳 Fizetés",
+                    "💳 Fizetés",
 
                 betaalTekst:
-                "Kérlek fizess €30-t a BBQ 2026-ra.<br>Köszönjük!",
+                    "Kérlek fizess €30-t a BBQ 2026-ra.<br>Köszönjük!",
 
                 betaalKnop:
-                "👉 Fizetés itt",
+                    "👉 Fizetés itt",
 
                 deelnemers:
-                "✅ Résztvevők",
+                    "✅ Résztvevők",
 
                 naam:
-                "Név",
+                    "Név",
 
                 status:
-                "Állapot",
+                    "Állapot",
 
                 ingeschreven:
-                "✅ Regisztrálva",
+                    "✅ Regisztrálva",
+
+                laden:
+                    "Résztvevők betöltése...",
+
+                fout:
+                    "A résztvevők betöltése sikertelen.",
 
                 footer:
-                "👉 A BBQ idén is Gerritnél lesz.<br><br>Üdv,<br>Andre és Gerrit"
+                    "👉 A BBQ idén is Gerritnél lesz.<br><br>Üdv,<br>Andre és Gerrit"
             }
         };
 
+        let deelnemersLijst = [];
+
         function setLanguage(lang) {
+            huidigeTaal = lang;
 
             document.getElementById("ondertitel").innerHTML =
                 teksten[lang].ondertitel;
@@ -697,15 +503,73 @@
             document.getElementById("status-header").innerHTML =
                 teksten[lang].status;
 
-            document.querySelectorAll(".status").forEach(el => {
-
-                el.innerHTML = teksten[lang].ingeschreven;
-            });
-
             document.getElementById("footer").innerHTML =
                 teksten[lang].footer;
+
+            renderParticipants();
         }
 
+        function renderParticipants() {
+            const tbody =
+                document.getElementById("participants-body");
+
+            tbody.innerHTML = "";
+
+            deelnemersLijst.forEach(deelnemer => {
+                const rij =
+                    document.createElement("tr");
+
+                const naamCel =
+                    document.createElement("td");
+
+                const statusCel =
+                    document.createElement("td");
+
+                naamCel.textContent =
+                    deelnemer.naam;
+
+                statusCel.textContent =
+                    teksten[huidigeTaal].ingeschreven;
+
+                statusCel.className =
+                    "status";
+
+                rij.appendChild(naamCel);
+                rij.appendChild(statusCel);
+
+                tbody.appendChild(rij);
+            });
+        }
+
+        async function loadParticipants() {
+            const tbody =
+                document.getElementById("participants-body");
+
+            try {
+                tbody.innerHTML =
+                    `<tr><td colspan="2">${teksten[huidigeTaal].laden}</td></tr>`;
+
+                const response =
+                    await fetch("deelnemers.json");
+
+                if (!response.ok) {
+                    throw new Error("JSON bestand niet gevonden");
+                }
+
+                deelnemersLijst =
+                    await response.json();
+
+                renderParticipants();
+
+            } catch (error) {
+                tbody.innerHTML =
+                    `<tr><td colspan="2">${teksten[huidigeTaal].fout}</td></tr>`;
+
+                console.error(error);
+            }
+        }
+
+        loadParticipants();
     </script>
 
 </body>
