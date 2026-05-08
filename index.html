@@ -54,36 +54,79 @@
             color: #cccccc;
         }
 
-        .info-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            overflow: hidden;
-            border-radius: 15px;
+        .info-cards {
+            margin-top: 30px;
         }
 
-        .info-table th {
-            background: orange;
-            color: black;
-            padding: 15px;
-            font-size: 1.1rem;
-        }
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-        .info-table td {
-            padding: 15px;
-            border-bottom: 1px solid #333;
             background: #262626;
+
+            padding: 18px 25px;
+            margin-bottom: 15px;
+
+            border-radius: 15px;
+
+            font-size: 1.1rem;
+
+            transition: 0.3s;
         }
 
-        tr:hover td {
+        .info-item:hover {
             background: #333333;
+            transform: scale(1.01);
+        }
+
+        .label {
+            font-weight: bold;
+            color: orange;
+        }
+
+        .value {
+            color: white;
+        }
+
+        .participants {
+            margin-top: 40px;
+        }
+
+        .participants-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .participant-card {
+            background: #262626;
+            padding: 18px;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .participant-card:hover {
+            background: #333333;
+            transform: translateY(-3px);
+        }
+
+        .participant-name {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .participant-status {
+            margin-top: 8px;
+            color: #4CAF50;
         }
 
         .payment-box {
-            margin-top: 35px;
+            margin-top: 40px;
             padding: 25px;
-            background: #2c2c2c;
-            border-radius: 15px;
+            background: #262626;
+            border-radius: 20px;
         }
 
         .payment-box h2 {
@@ -93,12 +136,12 @@
         .pay-button {
             display: inline-block;
             margin-top: 20px;
-            padding: 15px 30px;
+            padding: 15px 35px;
             background: orange;
             color: black;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 10px;
+            border-radius: 12px;
             transition: 0.3s;
         }
 
@@ -108,9 +151,10 @@
         }
 
         .footer-text {
-            margin-top: 30px;
+            margin-top: 40px;
             font-size: 1.1rem;
-            line-height: 1.6;
+            line-height: 1.7;
+            color: #cccccc;
         }
 
         @media (max-width: 768px) {
@@ -124,14 +168,14 @@
                 padding: 20px;
             }
 
-            .info-table th,
-            .info-table td {
-                padding: 10px;
-                font-size: 0.9rem;
-            }
-
             .subtitle {
                 font-size: 1rem;
+            }
+
+            .info-item {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
             }
 
             .pay-button {
@@ -158,35 +202,24 @@
                 Gezelligheid, vlees, drankjes en natuurlijk een topavond 🍻
             </p>
 
-            <table class="info-table">
+            <div class="info-cards">
 
-                <thead>
-                    <tr>
-                        <th>Informatie</th>
-                        <th>Details</th>
-                    </tr>
-                </thead>
+                <div class="info-item">
+                    <span class="label">📅 Datum</span>
+                    <span class="value">26 juni 2026</span>
+                </div>
 
-                <tbody>
+                <div class="info-item">
+                    <span class="label">📍 Locatie</span>
+                    <span class="value">Bij Gerrit</span>
+                </div>
 
-                    <tr>
-                        <td>📅 Datum</td>
-                        <td>26 juni 2026</td>
-                    </tr>
+                <div class="info-item">
+                    <span class="label">💰 Prijs</span>
+                    <span class="value">€30,- per persoon</span>
+                </div>
 
-                    <tr>
-                        <td>📍 Locatie</td>
-                        <td>Bij Gerrit</td>
-                    </tr>
-
-                    <tr>
-                        <td>💰 Prijs</td>
-                        <td>€30,- per persoon</td>
-                    </tr>
-
-                </tbody>
-
-            </table>
+            </div>
 
             <div class="payment-box">
 
@@ -208,59 +241,48 @@
 
             </div>
 
-            <div class="payment-box">
+            <div class="participants">
 
                 <h2>✅ Ingeschreven deelnemers</h2>
 
-                <table class="info-table">
+                <div class="participants-grid">
 
-                    <thead>
-                        <tr>
-                            <th>Naam</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
+                    <div class="participant-card">
+                        <div class="participant-name">Gerrit van Wijk</div>
+                        <div class="participant-status">✅ Ingeschreven</div>
+                    </div>
 
-                    <tbody>
+                    <div class="participant-card">
+                        <div class="participant-name">Andre van der Horst</div>
+                        <div class="participant-status">✅ Ingeschreven</div>
+                    </div>
 
-                        <tr>
-                            <td>Gerrit van Wijk</td>
-                            <td>✅ Ingeschreven</td>
-                        </tr>
+                    <div class="participant-card">
+                        <div class="participant-name">Wilco van Dijk</div>
+                        <div class="participant-status">✅ Ingeschreven</div>
+                    </div>
 
-                        <tr>
-                            <td>Andre van der Horst</td>
-                            <td>✅ Ingeschreven</td>
-                        </tr>
+                    <div class="participant-card">
+                        <div class="participant-name">Thorsten Lopulissa</div>
+                        <div class="participant-status">✅ Ingeschreven</div>
+                    </div>
 
-                        <tr>
-                            <td>Wilco van Dijk</td>
-                            <td>✅ Ingeschreven</td>
-                        </tr>
+                    <div class="participant-card">
+                        <div class="participant-name">Frans Philibert</div>
+                        <div class="participant-status">✅ Ingeschreven</div>
+                    </div>
 
-                        <tr>
-                            <td>Thorsten Lopulissa</td>
-                            <td>✅ Ingeschreven</td>
-                        </tr>
+                    <div class="participant-card">
+                        <div class="participant-name">Kranenburg-Meinders</div>
+                        <div class="participant-status">✅ Ingeschreven</div>
+                    </div>
 
-                        <tr>
-                            <td>Frans Philibert</td>
-                            <td>✅ Ingeschreven</td>
-                        </tr>
+                    <div class="participant-card">
+                        <div class="participant-name">Alexander Pouwels</div>
+                        <div class="participant-status">✅ Ingeschreven</div>
+                    </div>
 
-                        <tr>
-                            <td>Kranenburg-Meinders</td>
-                            <td>✅ Ingeschreven</td>
-                        </tr>
-
-                        <tr>
-                            <td>Alexander Pouwels</td>
-                            <td>✅ Ingeschreven</td>
-                        </tr>
-
-                    </tbody>
-
-                </table>
+                </div>
 
             </div>
 
