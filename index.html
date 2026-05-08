@@ -1,78 +1,137 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BBQ2026</title>
+    <title>🔥 BBQ RTN 2026 🔥</title>
 
     <style>
 
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            padding: 20px;
             font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+            background: #121212;
             color: white;
+        }
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+        .hero-image {
+            width: 100%;
+            max-height: 700px;
+            object-fit: cover;
+            display: block;
         }
 
         .container {
-            width: 100%;
-            max-width: 900px;
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: #1e1e1e;
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: -60px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             text-align: center;
         }
 
         h1 {
             font-size: 3rem;
             margin-bottom: 10px;
+            color: orange;
         }
 
-        p {
+        .subtitle {
+            font-size: 1.3rem;
             margin-bottom: 30px;
-            font-size: 1.2rem;
+            color: #cccccc;
         }
 
-        table {
+        .info-table {
             width: 100%;
             border-collapse: collapse;
-            background: rgba(255,255,255,0.08);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
+            margin-top: 20px;
             overflow: hidden;
+            border-radius: 15px;
         }
 
-        th {
-            background-color: #ff9800;
-            color: white;
+        .info-table th {
+            background: orange;
+            color: black;
             padding: 15px;
             font-size: 1.1rem;
         }
 
-        td {
-            padding: 14px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+        .info-table td {
+            padding: 15px;
+            border-bottom: 1px solid #333;
+            background: #262626;
         }
 
-        tr:hover {
-            background-color: rgba(255,255,255,0.08);
+        .payment-box {
+            margin-top: 35px;
+            padding: 25px;
+            background: #2c2c2c;
+            border-radius: 15px;
         }
 
-        @media (max-width: 600px) {
+        .payment-box h2 {
+            color: orange;
+        }
+
+        .pay-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: orange;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .pay-button:hover {
+            background: #ffb733;
+            transform: scale(1.05);
+        }
+
+        .footer-text {
+            margin-top: 30px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
 
             h1 {
                 font-size: 2rem;
             }
 
-            table {
+            .card {
+                margin-top: 0;
+                padding: 20px;
+            }
+
+            .info-table th,
+            .info-table td {
+                padding: 10px;
                 font-size: 0.9rem;
             }
 
-            th, td {
-                padding: 10px;
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .pay-button {
+                width: 100%;
             }
         }
 
@@ -81,44 +140,84 @@
 
 <body>
 
+    <img src="WhatsApp Image 2026-05-07 at 17.49.49.jpeg" alt="BBQ RTN 2026" class="hero-image">
+
     <div class="container">
 
-        <h1>🔥 BBQ2026 🔥</h1>
+        <div class="card">
 
-        <p>Inschrijvingen BBQ</p>
+            <h1>🔥 BBQ RTN 2026 🔥</h1>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Naam</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
+            <p class="subtitle">
+                Gezelligheid, vlees, drankjes en natuurlijk een topavond 🍻
+            </p>
 
-            <tbody>
-                <tr>
-                    <td>Gerrit van Wijk</td>
-                    <td>✅ Ingeschreven</td>
-                </tr>
+            <table class="info-table">
 
-                <tr>
-                    <td>Andre van der Horst</td>
-                    <td>✅ Ingeschreven</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Informatie</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
 
-                <tr>
-                    <td>Wilco van Dijk</td>
-                    <td>⏳ Nog niet betaald</td>
-                </tr>
+                <tbody>
 
-                <tr>
-                    <td>Thorsten Lopulissa</td>
-                    <td>✅ Ingeschreven</td>
-                </tr>
-            </tbody>
-        </table>
+                    <tr>
+                        <td>📅 Datum</td>
+                        <td>26 juni 2026</td>
+                    </tr>
+
+                    <tr>
+                        <td>📍 Locatie</td>
+                        <td>Bij Gerrit</td>
+                    </tr>
+
+                    <tr>
+                        <td>💰 Prijs</td>
+                        <td>€30,- per persoon</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <div class="payment-box">
+
+                <h2>💳 Betaalverzoek</h2>
+
+                <p>
+                    Hoi, wil je mij €30,00 betalen voor BBQ 2026?<br>
+                    Je kunt met elke bank in Nederland betalen.<br>
+                    Dank je wel!
+                </p>
+
+                <a class="pay-button"
+                   href="https://betaalverzoek.rabobank.nl/betaalverzoek/?id=ugmqBstWQUCJC3XnWOvXbw"
+                   target="_blank">
+
+                    👉 Betaal hier
+
+                </a>
+
+            </div>
+
+            <div class="footer-text">
+
+                👉 Zoals ieder jaar zal het weer bij Gerrit gehouden worden.<br>
+                Later meer info over tijden etc.
+
+                <br><br>
+
+                Groet,<br>
+                Andre & Gerrit
+
+            </div>
+
+        </div>
 
     </div>
 
 </body>
+
 </html>
